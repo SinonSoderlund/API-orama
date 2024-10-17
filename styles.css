@@ -1,0 +1,60 @@
+.bg-primary {
+    color: rgb(48, 112, 252);
+    background-color: rgb(64, 255, 150) !important;
+}
+
+
+body {
+    color: rgb(48, 112, 252);
+    background-color: black;
+}
+
+
+
+.navbar-brand,
+.nav-link {
+    color: rgb(109, 91, 150);
+}
+
+.nav-link.active {
+    color: rgb(79, 13, 235) !important;
+}
+
+footer {
+    color: rgb(79, 13, 235);
+    text-align: center;
+    margin-top: 3em;
+    padding-bottom: 0.5em;
+    background-color: rgb(64, 255, 150);
+}
+
+.card * {
+    background-color: rgb(34, 33, 33);
+    color: rgb(176, 143, 255);
+}
+
+.card {
+    margin-top: 2rem;
+}
+
+textarea {
+    resize: none;
+    border: 1px solid white !important;
+    border-radius: 0.5rem;
+}
+
+.alert {
+    margin-top: 2rem;
+    text-align: center;
+    background-color: rgb(64, 255, 150);
+    color: rgb(79, 13, 235);
+}
+
+#getCard {
+    margin-top: 2rem;
+}
+
+#imgHome {
+    margin-top: 2rem;
+    align-items: center;
+}
