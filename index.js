@@ -13,23 +13,27 @@ async function lookUpData() {
     let text = input.value;
     if (text !== "") {
         document.getElementById("alertItem").classList.add("d-none");
+        document.getElementById("searchAlertItem").classList.add("d-none");
         input.value = "";
-        text = text.replace(" ", "-");
-        console.log(`https://www.swapi.tech/api/people/?name=${text}`);
+        let searchText = text.replace(" ", "%20");
+        console.log(`https://www.swapi.tech/api/people/?name=${searchText}`);
 
-        fetch(`https://www.swapi.tech/api/people/?name=${text}`)
+        fetch(`https://www.swapi.tech/api/people/?name=${searchText}`)
             .then(res => res.json())
             .then(data => {
                 data = data["result"][0]["properties"]
                 let output = document.getElementById("StarWarInfo");
-                output.value = `Height: ${data["height"]}
+                output.value = `Name: ${data["name"]}
+Height: ${data["height"]}
 mass: ${data["mass"]}
 gender: ${data["gender"]}
 hair colour: ${data["hair_color"]}`
 
             }
             )
-            .catch(err => console.log(err));
+            .catch(err => console.log(err) 
+             (document.getElementById("searchAlertItem").classList.remove("d-none") 
+            (document.getElementById("StarWarInfo").value = `Name : ${text}`)));
     }
     else
         document.getElementById("alertItem").classList.remove("d-none");
